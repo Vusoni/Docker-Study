@@ -5,7 +5,7 @@ metadata:
   labels:
     group: example
 spec:
-  replicas: 1
+  replicas: 1 # How much pods i want to be launch
   selector:
     matchLabels:
       app: second-app
@@ -20,7 +20,7 @@ spec:
     spec: 
       containers:
         - name: second-node
-          image: academind/kub-first-app:2
+          image:/kub-first-app:2
           imagePullPolicy: Always
           livenessProbe: 
             httpGet:
